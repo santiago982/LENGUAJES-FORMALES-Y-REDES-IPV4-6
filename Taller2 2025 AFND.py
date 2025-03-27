@@ -11,11 +11,11 @@ regex_ipv6 = r"^([0-9a-fA-F]{1,4}:){7}([0-9a-fA-F]{1,4})$"
 def validar_ip():
     ip = entrada_ip.get()
     if re.match(regex_ipv4, ip):
-        messagebox.showinfo("Validación", f"La dirección {ip} es una IPv4 válida ✅")
+        messagebox.showinfo("Validación", f"La dirección {ip} es una IPv4 válida ")
     elif re.match(regex_ipv6, ip):
-        messagebox.showinfo("Validación", f"La dirección {ip} es una IPv6 válida ✅")
+        messagebox.showinfo("Validación", f"La dirección {ip} es una IPv6 válida ")
     else:
-        messagebox.showerror("Validación", f"La dirección {ip} NO es válida ❌")
+        messagebox.showerror("Validación", f"La dirección {ip} NO es válida ")
 
 def construir_afn_ipv4():
     G = nx.MultiDiGraph()
